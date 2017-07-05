@@ -41,5 +41,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 5.访问地址配置：默认是http://域名或者ip地址/项目名称/public/index.php/admin/login ,我的本地示例http://localhost/php/laravel-sentry-admin/public/index.php/admin 这里可以在apache或者nginx中通过配置出现不同的地址展示形式，后面将经典配置贴出。
 
 ## 项目图片示例
-![github](http://github.com/ugarden/laravel-sentry-admin/public/images/admin/upload-pic.png "github")  
+![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/admin/upload-pic.png "github")  
   
