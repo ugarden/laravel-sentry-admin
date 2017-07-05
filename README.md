@@ -31,4 +31,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## 邮箱：bomb.huang@qq.com 
 
 ## laravel-sentry-admin
-本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，项目集成了众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
+本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，项目集成了验证码、七牛、二维码生成、百度富文本编辑器等众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
+
+## 安装配置
+1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。
+2.将数据库从database/目录下考出导入自己数据库，数据库有初始数据，千万不可删除，否则项目将不可行。【文件名laravel_sentry_admin.sql】，初始账号：admin@qq.com 密码123456 
+3.数据库相关配置在.env文件中，将配置更改为自己数据库配置即可。
+4.项目默认是debug模式，方便开发及时捕获错误信息，若放正式环境请将.env配置中的APP_DEBUG改为false
+
+## 项目图片示例
+
