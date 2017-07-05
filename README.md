@@ -31,7 +31,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## 邮箱：bomb.huang@qq.com 
 
 ## laravel-sentry-admin
-    本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，前端使用H-ui.admin，还集成了验证码、七牛、二维码生成、百度富文本编辑器等众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
+TabTab本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，前端使用H-ui.admin，还集成了验证码、七牛、二维码生成、百度富文本编辑器等众TabTab多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国TabTab外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
 
 ## 安装配置
     1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。  
