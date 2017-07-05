@@ -31,18 +31,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## 邮箱：bomb.huang@qq.com 
 
 ## laravel-sentry-admin
-TabTab本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，前端使用H-ui.admin，还集成了验证码、七牛、二维码生成、百度富文本编辑器等众TabTab多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国TabTab外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
+本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，前端使用H-ui.admin，还集成了验证码、七牛、二维码生成、百度富文本编辑器等众TabTab多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国TabTab外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
 
 ## 安装配置
-TabTab1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。  
-TabTab2.将数据库从database/目录下考出导入自己数据库，数据库有初始数据，千万不可删除，否则项目将不可行。【文件名laravel_sentry_admin.sql】，初始账  号：admin@qq.com 密码123456  
-TabTab3.数据库相关配置在.env文件中，将配置更改为自己数据库配置即可。  
-TabTab4.项目默认是debug模式，方便开发及时捕获错误信息，若放正式环境请将.env配置中的APP_DEBUG改为false。  
-TabTab5.访问地址配置：默认是http://域名或者ip地址/项目名称/public/index.php/admin/login ,我的本地示例http://localhost/php/laravel-sentry-   admin/public/index.php/admin 这里可以在apache或者nginx中通过配置出现不同的地址展示形式。
-TabTab6.laravel所需环境要求以及访问url相关配置请参考https://docs.golaravel.com/docs/5.1/installation/ 不理解的地方请发邮件或者issue，大家共同学习，谢谢。
+1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。  
+2.将数据库从database/目录下考出导入自己数据库，数据库有初始数据，千万不可删除，否则项目将不可行。【文件名laravel_sentry_admin.sql】，初始账  号：admin@qq.com 密码123456  
+3.数据库相关配置在.env文件中，将配置更改为自己数据库配置即可。  
+4.项目默认是debug模式，方便开发及时捕获错误信息，若放正式环境请将.env配置中的APP_DEBUG改为false。  
+5.访问地址配置：默认是http://域名或者ip地址/项目名称/public/index.php/admin/login ,我的本地示例http://localhost/php/laravel-sentry-   admin/public/index.php/admin 这里可以在apache或者nginx中通过配置出现不同的地址展示形式。
+6.laravel所需环境要求以及访问url相关配置请参考https://docs.golaravel.com/docs/5.1/installation/ 不理解的地方请发邮件或者issue，大家共同学习，谢谢。
 
 ## 项目图片示例
 ![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/login.png "github")  
 ![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/user.png "github")  
 ![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/role.png "github")  
 ![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/permission.png "github")  
+
+## 致谢
+在此致谢感谢H-ui、jQuery、layer、laypage、Validform、UEditor、My97DatePicker、iconfont、Datatables、WebUploaded、icheck、bootstrap-Switch
