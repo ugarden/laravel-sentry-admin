@@ -37,7 +37,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。  
 2.将数据库从database/目录下考出导入自己数据库，数据库有初始数据，千万不可删除，否则项目将不可行。【文件名laravel_sentry_admin.sql】，初始账号：admin@qq.com 密码123456  
 3.数据库相关配置在.env文件中，将配置更改为自己数据库配置即可。  
-4.项目默认是debug模式，方便开发及时捕获错误信息，若放正式环境请将.env配置中的APP_DEBUG改为false
+4.项目默认是debug模式，方便开发及时捕获错误信息，若放正式环境请将.env配置中的APP_DEBUG改为false。  
+5.访问地址配置：默认是http://域名或者ip地址/项目名称/public/index.php/admin/login ,我的本地示例http://localhost/php/laravel-sentry-admin/public/index.php/admin 这里可以在apache或者nginx中通过配置出现不同的地址展示形式，后面将经典配置贴出。
 
 ## 项目图片示例
 
