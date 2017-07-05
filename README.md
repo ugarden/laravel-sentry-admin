@@ -29,3 +29,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Author:hc
 ## 邮箱：bomb.huang@qq.com 
+
+## laravel-sentry-admin
+本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，项目集成了众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。
