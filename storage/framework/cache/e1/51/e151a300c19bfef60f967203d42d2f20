@@ -1,0 +1,1842 @@
+9999999999s:130646:"<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>api文档</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/php/laravel-sentry-admin/public/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/php/laravel-sentry-admin/public/easyui/themes/icon.css">
+    <script type="text/javascript" src="http://localhost/php/laravel-sentry-admin/public/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost/php/laravel-sentry-admin/public/easyui/jquery.easyui.min.js"></script>
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="http://localhost/php/laravel-sentry-admin/public/images/admin/favicon.ico">
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        body {
+            font-family: Consolas;
+        }
+
+        pre {
+            font-family: Consolas;
+            line-height: 30px;
+        }
+
+        .module {
+            font-weight: bold;
+        }
+
+        .panel-body {
+            overflow-x: hidden;
+        }
+
+        .tree-icon {
+            display: none;
+        }
+
+        dd {
+            margin-left: 20px;
+            line-height: 25px
+        }
+
+        .tree-title {
+            font-size: 14px;
+            width: calc(100% - 32px);
+            width: -moz-calc(100% - 32px);
+            width: -webkit-calc(100% - 32px);
+            display: inline-block;
+            position: relative;
+        }
+
+        .tree-title a {
+            text-decoration: none;
+        }
+
+        p td {
+            font-size: 16px;
+        }
+
+        .tree-node {
+            height: 30px;
+        }
+
+        .tree-node > span {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .tree-expanded {
+            background: none;
+        }
+
+        .tree-hit {
+            display: none
+        }
+
+        .tree-expanded ~ .tree-title:after {
+            content: '-';
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .tree-collapsed {
+            background: none;
+        }
+
+        .tree-collapsed ~ .tree-title:after {
+            content: '+';
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .page {
+            border: 1px solid white;
+            box-shadow: 0 0 5px #111;
+            width: 900px;
+            margin: 20px auto 20px auto;
+            background-color: white;
+            min-height: calc(100% - 40px);
+            min-height: -moz-calc(100% - 40px);
+            min-height: -webkit-calc(100% - 40px);
+        }
+
+        .page > h2 {
+            text-align: center;
+        }
+
+        #tab .panel-body {
+            background-color: #c0c2cc;
+        }
+
+        .block {
+            margin: 50px 40px 0 40px;
+            border-bottom: 1px solid #0072c6;
+        }
+
+        .block:last-child {
+            border: none;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0072c6;
+        }
+
+        .content {
+            font-size: 15px;
+            text-indent: 40px;
+            padding-bottom: 10px;
+        }
+
+        .content table {
+            margin-left: 40px;
+            width: calc(100% - 40px);
+            width: -moz-calc(100% - 40px);
+            width: -webkit-calc(100% - 40px);
+        }
+
+        .content table tbody tr:hover {
+            background-color: #006dcc;
+            color: white;
+            cursor: pointer;
+        }
+
+        .content ol {
+            margin-left: 20px;
+        }
+
+        .content th {
+            font-weight: normal;
+            color: grey;
+        }
+
+        .content th, td {
+            padding: 5px 0;
+            text-indent: 3px;
+        }
+
+        .content ol li {
+            height: 26px;
+            line-height: 26px;
+        }
+
+        #home li {
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        #home pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        .remark {
+            text-indent: 5px
+        }
+
+        #rebuild {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+            padding: 10px;
+        }
+
+        #rebuild a {
+            font-size: 13px;
+            text-decoration: none;
+            color: black;
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body class="easyui-layout">
+<div id="rebuild"><a class="icon-reload" href="http://localhost/php/laravel-sentry-admin/public/doc?rebuild=1" title="重新生成文档"></a></div>
+
+<div data-options="region:'west',split:true,title:'',tools:'#tools'" style="width:300px;">
+    <ul id="tree" class="easyui-tree">
+                    <li>
+                <span> <span class="module">植物百科</span> </span>
+                <ul>
+
+                                            <li data-options="id:'29e3e5f16abd4b8091463148a57c0d3e'">
+                                <span>植物列表 - api/plant-basic
+
+                                    <script type="text/html" id="29e3e5f16abd4b8091463148a57c0d3e">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物列表</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>category</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>分类查询</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>letter</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>首字母</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>page</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>页数</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>rows</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>每页显示数</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>difficulty</td>
+                                                                    <td>int</td>
+                                                                    <td>否</td>
+                                                                    <td>养护难度 1非常容易、2容易、3一般，4难，5很难</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>植物ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latin_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物拉丁名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>family</td>
+                                                                    <td>string</td>
+                                                                    <td>科</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>genus</td>
+                                                                    <td>string</td>
+                                                                    <td>属</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>difficulty</td>
+                                                                    <td>int</td>
+                                                                    <td>养护难度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>cover</td>
+                                                                    <td>string</td>
+                                                                    <td>封面图片url</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'1ff6fa30ef13af514599193882179dc0'">
+                                <span>名称搜索植物 - api/plant-basic/list-by-name
+
+                                    <script type="text/html" id="1ff6fa30ef13af514599193882179dc0">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">名称搜索植物</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/list-by-name
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>植物ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latin_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物拉丁名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>family</td>
+                                                                    <td>string</td>
+                                                                    <td>科</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>genus</td>
+                                                                    <td>string</td>
+                                                                    <td>属</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>difficulty</td>
+                                                                    <td>int</td>
+                                                                    <td>养护难度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>cover</td>
+                                                                    <td>string</td>
+                                                                    <td>封面图片url</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'301ab3e98061726836eef44126133b57'">
+                                <span>植物详情 - api/plant-basic/plant-detail
+
+                                    <script type="text/html" id="301ab3e98061726836eef44126133b57">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物详情</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/plant-detail
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latin_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物拉丁名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>family</td>
+                                                                    <td>string</td>
+                                                                    <td>科</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>genus</td>
+                                                                    <td>string</td>
+                                                                    <td>属</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>alias</td>
+                                                                    <td>string</td>
+                                                                    <td>植物别名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>introduct_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>植物简介概要</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>introduct</td>
+                                                                    <td>string</td>
+                                                                    <td>植物简介</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>application_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>生活应用价值概要</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>application</td>
+                                                                    <td>string</td>
+                                                                    <td>生活应用价值</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>habit_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>植物习性概要</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>habit</td>
+                                                                    <td>string</td>
+                                                                    <td>植物习性</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>difficulty</td>
+                                                                    <td>int</td>
+                                                                    <td>养护难度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>cover</td>
+                                                                    <td>string</td>
+                                                                    <td>封面图片url</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'6217e0f7e46e87c6a8fd2741bff63f21'">
+                                <span>注意事项 - api/plant-basic/need-taboo
+
+                                    <script type="text/html" id="6217e0f7e46e87c6a8fd2741bff63f21">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">注意事项</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/need-taboo
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>content</td>
+                                                                    <td>string</td>
+                                                                    <td>注意内容</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>sort</td>
+                                                                    <td>int</td>
+                                                                    <td>排序</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'8a0730869817d574d8fa517cab0d734d'">
+                                <span>单个养护要点 - api/plant-basic/points
+
+                                    <script type="text/html" id="8a0730869817d574d8fa517cab0d734d">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">单个养护要点</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/points
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>regional</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>养护地域 暂时只有&#039;华南&#039;,参数请传递对应的拼音,&#039;例如huanan&#039;</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_name</td>
+                                                                    <td>string</td>
+                                                                    <td>养护名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_title</td>
+                                                                    <td>string</td>
+                                                                    <td>养护标题</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>content_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>养护内容概要</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>content</td>
+                                                                    <td>string</td>
+                                                                    <td>养护内容</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_time</td>
+                                                                    <td>string</td>
+                                                                    <td>养护时间</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>sort</td>
+                                                                    <td>int</td>
+                                                                    <td>排序</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                                                                            <div class="block">
+                                                    <p class="title">备注</p>
+                                                    <div class="content remark">
+                                                        <ol>
+                                                                                                                            <li>只显示当前季度的养护要点</li>
+                                                                                                                    </ol>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'1952030f20744c0ecd6e0bdaa39640f1'">
+                                <span>全部养护要点 - api/plant-basic/points-list
+
+                                    <script type="text/html" id="1952030f20744c0ecd6e0bdaa39640f1">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">全部养护要点</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/points-list
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>regional</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>养护地域 暂时只有&#039;华南&#039;,参数请传递对应的拼音,例如&#039;huanan&#039;</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_name</td>
+                                                                    <td>string</td>
+                                                                    <td>养护名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_title</td>
+                                                                    <td>string</td>
+                                                                    <td>养护标题</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>content_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>养护内容概要</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>content</td>
+                                                                    <td>string</td>
+                                                                    <td>养护内容</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>maintenance_time</td>
+                                                                    <td>string</td>
+                                                                    <td>养护时间</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>sort</td>
+                                                                    <td>int</td>
+                                                                    <td>排序</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'c7b63b19b2fcd2a18d51fe2b937023f1'">
+                                <span>植物图片 - api/plant-basic/images
+
+                                    <script type="text/html" id="c7b63b19b2fcd2a18d51fe2b937023f1">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物图片</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/images
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_img</td>
+                                                                    <td>string</td>
+                                                                    <td>植物图片url</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>sort</td>
+                                                                    <td>int</td>
+                                                                    <td>排序</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'0d39e696b777a8ff23438d93be52b5ea'">
+                                <span>帖子 - api/plant-basic/post
+
+                                    <script type="text/html" id="0d39e696b777a8ff23438d93be52b5ea">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">帖子</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/post
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>title</td>
+                                                                    <td>string</td>
+                                                                    <td>标题</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>href</td>
+                                                                    <td>string</td>
+                                                                    <td>链接</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'bc29cd80e452c658756874ab39cdc35d'">
+                                <span>植物热度搜索 - api/plant-basic/hot
+
+                                    <script type="text/html" id="bc29cd80e452c658756874ab39cdc35d">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物热度搜索</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/plant-basic/hot
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>植物ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latin_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物拉丁名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>family</td>
+                                                                    <td>string</td>
+                                                                    <td>科</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>genus</td>
+                                                                    <td>string</td>
+                                                                    <td>属</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>difficulty</td>
+                                                                    <td>int</td>
+                                                                    <td>养护难度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>cover</td>
+                                                                    <td>string</td>
+                                                                    <td>封面图片url</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                                                                            <div class="block">
+                                                    <p class="title">备注</p>
+                                                    <div class="content remark">
+                                                        <ol>
+                                                                                                                            <li>不传参默认显示热度最高的五条数据</li>
+                                                                                                                    </ol>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'af620e2d3be077d6982bd35e0b6f0131'">
+                                <span>种类列表 - api/species
+
+                                    <script type="text/html" id="af620e2d3be077d6982bd35e0b6f0131">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">种类列表</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/species
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            无
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>name</td>
+                                                                    <td>string</td>
+                                                                    <td>种类名称</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'f182724370da58b9daed956f3f0094ff'">
+                                <span>养护难度列表 - api/species/difficultys
+
+                                    <script type="text/html" id="f182724370da58b9daed956f3f0094ff">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">养护难度列表</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                     &nbsp;api/species/difficultys
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            无
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>name</td>
+                                                                    <td>string</td>
+                                                                    <td>难度名称</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'d7431c64e58e9c0d58e0c6cbd40ae43a'">
+                                <span>养护工具 - api/species/tools
+
+                                    <script type="text/html" id="d7431c64e58e9c0d58e0c6cbd40ae43a">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">养护工具</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                     &nbsp;api/species/tools
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>name</td>
+                                                                    <td>string</td>
+                                                                    <td>工具名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>image</td>
+                                                                    <td>string</td>
+                                                                    <td>工具图标</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>buy_link</td>
+                                                                    <td>string</td>
+                                                                    <td>链接</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                    </ul>
+            </li>
+                    <li>
+                <span> <span class="module">树牌扫码</span> </span>
+                <ul>
+
+                                            <li data-options="id:'34b6a3e2086e739a8875cdac5f4e0f52'">
+                                <span>添加二维码评论 - api/qr-comments/add
+
+                                    <script type="text/html" id="34b6a3e2086e739a8875cdac5f4e0f52">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">添加二维码评论</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    POST &nbsp;api/qr-comments/add
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>image</td>
+                                                                    <td>file</td>
+                                                                    <td>否</td>
+                                                                    <td>图片文件</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>describe</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>文字描述,留言内容</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>phone</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>手机号码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>password</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>提取密码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>status</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>状态</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            无
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'6909946887cc4f34921bcbf123943500'">
+                                <span>查询二维码评论 - api/qr-comments
+
+                                    <script type="text/html" id="6909946887cc4f34921bcbf123943500">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">查询二维码评论</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr-comments
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>phone</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>手机号码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>password</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>提取密码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>image</td>
+                                                                    <td>string</td>
+                                                                    <td>图片url</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>describe</td>
+                                                                    <td>string</td>
+                                                                    <td>文字描述</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>created_at</td>
+                                                                    <td>string</td>
+                                                                    <td>创建时间</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'40c7b078214e6d3bafc840811bf085fc'">
+                                <span>查询所有二维码评论最新一张照片 - api/qr-comments/latest-photo
+
+                                    <script type="text/html" id="40c7b078214e6d3bafc840811bf085fc">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">查询所有二维码评论最新一张照片</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr-comments/latest-photo
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>image</td>
+                                                                    <td>string</td>
+                                                                    <td>图片url</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>describe</td>
+                                                                    <td>string</td>
+                                                                    <td>文字描述</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>longitude</td>
+                                                                    <td>string</td>
+                                                                    <td>经度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latitude</td>
+                                                                    <td>string</td>
+                                                                    <td>纬度</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'d0c7441d4611592b92b2980a4d5237d4'">
+                                <span>植物详情 - api/qr/qr-detail
+
+                                    <script type="text/html" id="d0c7441d4611592b92b2980a4d5237d4">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物详情</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr/qr-detail
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>否</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>qr_code</td>
+                                                                    <td>string</td>
+                                                                    <td>否</td>
+                                                                    <td>二维码编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>string</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latin_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物拉丁名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>family</td>
+                                                                    <td>string</td>
+                                                                    <td>科</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>genus</td>
+                                                                    <td>string</td>
+                                                                    <td>属</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>alias</td>
+                                                                    <td>string</td>
+                                                                    <td>常用别名</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>cover</td>
+                                                                    <td>string</td>
+                                                                    <td>封面</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>origin</td>
+                                                                    <td>string</td>
+                                                                    <td>产地分布</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>introduct_profile</td>
+                                                                    <td>string</td>
+                                                                    <td>观赏特性简介</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>introduct</td>
+                                                                    <td>string</td>
+                                                                    <td>观赏特性</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>form</td>
+                                                                    <td>string</td>
+                                                                    <td>形态简介</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>Longitude</td>
+                                                                    <td>double</td>
+                                                                    <td>经度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latitude</td>
+                                                                    <td>double</td>
+                                                                    <td>纬度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plantNeedTabooObj</td>
+                                                                    <td>array</td>
+                                                                    <td>注意事项数组</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plantTraitObj</td>
+                                                                    <td>array</td>
+                                                                    <td>植物特性数组</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                                                                            <div class="block">
+                                                    <p class="title">备注</p>
+                                                    <div class="content remark">
+                                                        <ol>
+                                                                                                                            <li>plantNeedTabooObj包括[content注意内容，sort排序]</li>
+                                                                                                                            <li>plantTraitObj包括[title标题，content内容，sort排序]</li>
+                                                                                                                            <li>qr_tag_id/qr_code两者不能同时为空</li>
+                                                                                                                    </ol>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'6a75b432c50cac3d5cc06d64d53dcdf2'">
+                                <span>植物图片 - api/qr/qr-image
+
+                                    <script type="text/html" id="6a75b432c50cac3d5cc06d64d53dcdf2">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">植物图片</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr/qr-image
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>是</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>plant_img</td>
+                                                                    <td>string</td>
+                                                                    <td>植物图片url</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>sort</td>
+                                                                    <td>int</td>
+                                                                    <td>排序</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'4e55c097c00ea02f2973e97e6d04d8c1'">
+                                <span>客户简介 - api/qr/customer
+
+                                    <script type="text/html" id="4e55c097c00ea02f2973e97e6d04d8c1">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">客户简介</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr/customer
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>是否必须</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>qr_tag_id</td>
+                                                                    <td>int</td>
+                                                                    <td>是</td>
+                                                                    <td>二维码ID</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>icon</td>
+                                                                    <td>string</td>
+                                                                    <td>图标图片url</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>customer_name</td>
+                                                                    <td>string</td>
+                                                                    <td>客户名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>dept</td>
+                                                                    <td>string</td>
+                                                                    <td>客户简介</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                            <li data-options="id:'9287c285b605dc8bb76f4f16ec1ef13a'">
+                                <span>所有二维码位置 - api/qr/qr-address
+
+                                    <script type="text/html" id="9287c285b605dc8bb76f4f16ec1ef13a">
+                                        <div class="page">
+                                            <h2 style="margin: 40px auto 40px auto">所有二维码位置</h2>
+
+                                            
+                                            <div class="block">
+                                                <p class="title">请求</p>
+                                                <div class="content" style="font-style: italic;">
+                                                    GET &nbsp;api/qr/qr-address
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输入参数 </p>
+                                                <div class="content">
+
+                                                                                                            无
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <p class="title">输出参数 </p>
+                                                <div class="content">
+                                                                                                            <table>
+                                                            <thead><tr><th>参数名</th><th>参数类型</th><th>参数解释</th></tr></thead>
+                                                            <tbody>
+                                                                                                                            <tr>
+                                                                    <td>id</td>
+                                                                    <td>int</td>
+                                                                    <td>二维码id</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_code</td>
+                                                                    <td>string</td>
+                                                                    <td>植物编码</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>plant_name</td>
+                                                                    <td>string</td>
+                                                                    <td>植物名称</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>longitude</td>
+                                                                    <td>double</td>
+                                                                    <td>经度</td>
+                                                                </tr>
+                                                                                                                            <tr>
+                                                                    <td>latitude</td>
+                                                                    <td>double</td>
+                                                                    <td>纬度</td>
+                                                                </tr>
+                                                                                                                        </tbody>
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </script>
+                                </span>
+                        </li>
+                                    </ul>
+            </li>
+            </ul>
+</div>
+
+<div data-options="region:'center',border:false" style="background-color: #eee">
+    <div id="tab">
+        <div title="主页">
+            <div class="page" id="home">
+                <h2 style="margin: 40px auto 40px auto">接口说明</h2>
+                <div class="block">
+                    <ol>
+
+                        <li>接口返回数据格式为:
+                            <pre>{
+    "errno": "错误号",
+    "errmsg": "错误信息",
+    "data": "数据"
+}</pre>
+                            <dl>
+                                <dt></dt>
+                                <dd>errno为0表示成功，非0表示失败。</dd>
+                                <dd>3001: 账号被封禁</dd>
+                                <dd>4001: 参数错误</dd>
+                                <dd>4002: 数据库错误</dd>
+                                <dd>4003: 数据不存在</dd>
+                                <dd>4004: token错误</dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            测试url: http://202.105.84.2:9999
+                        </li>
+                        <li>
+                            所有接口必须通过header传递token参数授权才可访问， "token":"9ef5a4cf5d69fadd6be6d16c8670316abd37d01dMTE4ODE="
+                        </li>
+
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var $tab = $('#tab')
+    var $tree = $('#tree')
+
+    $tab.tabs({
+        border: false,
+        fit: true
+    })
+
+    $tree.tree({
+        onClick: function (node) {
+            if (node.id)
+                tab(node.text, $('#' + node.id).html())
+            else
+                $tree.tree('toggle', node.target)
+        },
+        onLoadSuccess: function () {
+            $('.module').parent().css({'background-color': '#E0ECFF', width: '100%', 'padding-left': 10})
+        }
+    })
+
+
+    function tab(title, content) {
+        if ($tab.tabs('exists', title))
+            $tab.tabs('select', title)
+        else
+            $tab.tabs('add', {
+                title: title,
+                content: content,
+                closable: true
+            })
+    }
+
+</script>
+</body>
+</html>
+
+
+";
