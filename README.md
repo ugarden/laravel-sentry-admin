@@ -31,7 +31,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## 邮箱：bomb.huang@qq.com 
 
 ## laravel-sentry-admin
-本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，项目集成了验证码、七牛、二维码生成、百度富文本编辑器等众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
+本项目是一个基于laravel5.1开发的后台管理系统，集成sentry权限管理，前端使用H-ui.admin，还集成了验证码、七牛、二维码生成、百度富文本编辑器等众多组件，后面会陆续将组件demo发布。目前先上线权限管理，方便大家即取即用。sentry文档地址https://cartalyst.com/manual/sentry/2.1 当然有的看国外的不太理解，这里推荐一个中文文档由 @袁超 编写，感觉挺不错的，链接https://yccphp.gitbooks.io/sentry-manual-chinese-version/content/ 。
 
 ## 安装配置
 1.这里提供了vender扩展，下载觉得文件过大的话可以省略此文件，此处sentry等第三方扩展已经配置好，只需执行composer update安装相关扩展。  
@@ -41,5 +41,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 5.访问地址配置：默认是http://域名或者ip地址/项目名称/public/index.php/admin/login ,我的本地示例http://localhost/php/laravel-sentry-admin/public/index.php/admin 这里可以在apache或者nginx中通过配置出现不同的地址展示形式，后面将经典配置贴出。
 
 ## 项目图片示例
-![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/admin/upload-pic.png "github")  
+![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/login.png "github")  
+![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/permission.png "github")  
+![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/user.png "github")  
+![github](https://raw.githubusercontent.com/ugarden/laravel-sentry-admin/master/public/images/role.png "github")  
   
