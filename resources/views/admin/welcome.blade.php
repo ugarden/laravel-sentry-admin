@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="page-container">
-    <p class="f-20 text-success">欢迎使用植物百科后台应用管理系统！</p>
+    <p class="f-20 text-success">欢迎使用{{env('PROJECT_TITLE')}}！</p>
     <table class="table table-border table-bordered table-bg mt-20">
         <thead>
         <tr>
@@ -42,8 +42,7 @@
     <div class="container">
         <p>
             感谢H-ui、jQuery、layer、laypage、Validform、UEditor、My97DatePicker、iconfont、Datatables、WebUploaded、icheck、bootstrap-Switch<br>
-            Copyright@ 2013-2017 Vbuy. All Rights Reserved.
-            本系统由广州微百信息技术有限公司提供技术支持</p>
+           </p>
     </div>
 </footer>
 </body>
