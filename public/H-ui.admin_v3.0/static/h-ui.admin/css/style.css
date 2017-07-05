@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 你自己的样式 */
+
+/*定义datatables点击分页按钮加载状态样式*/
+#pageprocessing {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/*植物封面图片预览样式*/
+#preview {
+    width: 190px;
+    height: 190px;
+    border: 1px solid #c2ccd1;
+    overflow: hidden;
+}
+
+#cover-preview {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+}
+
